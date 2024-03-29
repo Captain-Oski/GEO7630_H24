@@ -51,7 +51,20 @@ view.ui.add(compass, "top-left");
         // Un Pop-up ou menu "Home" avec un petit texte qui vient expliquer l'étude
         // Ajouter le titre en plus gros
 
+// Couches à générer :
 
+        // Piste cyclable (données temporelles ?) dont REV
+        // Stations de comptage vélo (réunis de toutes les sources de comptage)
+        // Krigeage comptage vélos par année
+        // Krigeage indicateur 1 (raster)
+        // Krigeage indicateur 2 (raster)
+        // Krigeage indicateur 3 (raster)
+        // Krigeage indicateur 4 (raster)
+        // Piste cyclable avec indicateur 1 (ligne)
+        // Piste cyclable avec indicateur 2 (ligne)
+        // Piste cyclable avec indicateur 3 (ligne)
+        // Piste cyclable avec indicateur 4 (ligne)
+        // Piste cyclable avec indice intégré complet (réunion des 4 indicateurs)
         
 
 
