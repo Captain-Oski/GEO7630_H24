@@ -1,6 +1,13 @@
-// Ajout des widgets de la carte
+// A. Ajout des widgets de la carte :
 
-/// Création du contrôle de navigation
+// A.1. Création du contrôle d'échelle
+var scale = new maplibregl.ScaleControl({
+    unit: 'metric' // utilisation de l'unité métrique
+});
+
+map.addControl(scale); // ajout du contrôle en bas à gauche de la carte
+
+// A.2. Création du contrôle de navigation
 var nav = new maplibregl.NavigationControl({
     showCompass: true, // affichage de la boussole
     showZoom: true, // affichage des boutons de zoom
@@ -8,7 +15,7 @@ var nav = new maplibregl.NavigationControl({
 });
 map.addControl(nav, 'top-right'); // ajout du contrôle en haut à droite de la carte
 
-/// Création du contrôle de géolocalisation
+// A.3. Création du contrôle de géolocalisation
 var geolocateControl = new maplibregl.GeolocateControl({
     positionOptions: {
         enableHighAccuracy: true // activation de la géolocalisation précise
@@ -19,15 +26,7 @@ var geolocateControl = new maplibregl.GeolocateControl({
 map.addControl(geolocateControl, 'bottom-right'); // ajout du contrôle en bas à droite de la carte
 
 
-/// Création du contrôle d'échelle
-var scale = new maplibregl.ScaleControl({
-    unit: 'metric' // utilisation de l'unité métrique
-});
-
-map.addControl(scale); // ajout du contrôle en bas à gauche de la carte
-
-
-/// Zoom et boussole
+// A.4. Zoom et boussole
 var view = new MapView({
    container: "viewDiv",
    map: map
@@ -43,14 +42,18 @@ var compass = new Compass({
 
 view.ui.add(compass, "top-left");
 
+// Idées d'élements à intégrer 
 
-/// Affiche la position de l'utilisateur
-var gl = new GraphicsLayer();
-map.add(gl);
+        // Pour l'évolution temporel : TimeSlider
+        // Ajouter une Basemap (sombre ?)
+        // Sélection des couches à affcher
+        // Affichage de la légende
+        // Un Pop-up ou menu "Home" avec un petit texte qui vient expliquer l'étude
+        // Ajouter le titre en plus gros
 
-var locateWidget = new Locate({
-  view: view,   // Lie le bouton à la vue
-  graphicsLayer: gl  // Couche à laquelle la localisation est affectée
-});
 
-view.ui.add(locateWidget, "top-right");
+        
+
+
+
+
