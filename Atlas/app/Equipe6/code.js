@@ -1,0 +1,12 @@
+map.on('load',function(){
+    map.addSource('pistes_cyclables_agreables-source',{
+        type:'vector',
+        tiles:['https://automatic-waddle-g4q76xvr9x99fvprp-8801.app.github.dev/FH791176.pistes_cyclables_agreables/{z}/{x}/{y}.pbf']
+    })
+    map.addLayer({
+        'id':'pistes_cyclables_agreables',
+        'type':'fill',
+        'source':'pistes_cyclables_agreables-source',
+        'source-layer':'FH791176.pistes_cyclables_agreables'
+    })
+});
