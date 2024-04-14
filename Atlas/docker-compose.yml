@@ -23,6 +23,7 @@ services:
       - 8000:80
     volumes:
       - ./app/:/usr/share/nginx/html
+      - ../Laboratoires/Lab 9/:/usr/share/nginx/html/lab9
       - ../Laboratoires/Lab 11/:/usr/share/nginx/html/modules/lab11
     restart: always
   
