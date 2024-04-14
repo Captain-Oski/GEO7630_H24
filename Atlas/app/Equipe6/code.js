@@ -18,14 +18,14 @@ function addDataToMap() {
     // Ajouter les sources
     map.addSource('pistes_cyclables_agreables-source', {
         type: 'vector',
-        tiles: ['https://friendly-trout-jj5q9rp765q935g9j-8801.app.github.dev/FH791176.pistes_cyclables_agreables/{z}/{x}/{y}.pbf'],
+        tiles: ['https://vigilant-doodle-r447pqpv4957hwpgq-8801.app.github.dev/FH791176.pistes_cyclables_agreables/{z}/{x}/{y}.pbf'],
         minzoom: 0,
         maxzoom: 22
      });
 
     map.addSource('zone_travaux-source', {
         type: 'vector',
-        tiles: ['https://friendly-trout-jj5q9rp765q935g9j-8801.app.github.dev/FH791176.zone_travaux/{z}/{x}/{y}.pbf'],
+        tiles: ['https://vigilant-doodle-r447pqpv4957hwpgq-8801.app.github.dev/FH791176.zone_travaux/{z}/{x}/{y}.pbf'],
         minzoom: 0,
         maxzoom: 22
     });
