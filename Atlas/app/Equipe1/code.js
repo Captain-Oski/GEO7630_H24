@@ -1,25 +1,66 @@
-// création du contrôle de navigation
+// A.1. Création du contrôle d'échelle  
 
-var nav = new maplibregl.NavigationControl({
+var scale = new maplibregl.ScaleControl({ 
+    unit: 'metric' // utilisation de l'unité métrique  
 
-    showCompass: true, // affichage de la boussole
+}); 
 
-    showZoom: true, // affichage des boutons de zoom
+map.addControl(scale); // ajout du contrôle en bas à gauche de la carte  
 
-    visualizePitch: true // affichage de l'angle d'inclinaison
 
-});
+// A.2. Création du contrôle de navigation  
 
-var geolocateControl = new maplibregl.GeolocateControl({
+var nav = new maplibregl.NavigationControl({ 
 
-    positionOptions: {
+    showCompass: true, // affichage de la boussole  
 
-        enableHighAccuracy: true // activation de la géolocalisation précise
+    showZoom: true, // affichage des boutons de zoom  
 
-    },
+    visualizePitch: true // affichage de l'angle d'inclinaison  
 
-    trackUserLocation: true // suivi automatique de la position de l'utilisateur
+}); 
 
-})
+map.addControl(nav, 'bottom-right'); // ajout du contrôle en haut à droite de la carte  
 
-map.addControl(geolocateControl, 'bottom-right'); // ajout du contrôle en bas à droite de la carte
+
+// A.3. Création du contrôle de géolocalisation  
+
+var geolocateControl = new maplibregl.GeolocateControl({ 
+
+    positionOptions: { 
+
+        enableHighAccuracy: true // activation de la géolocalisation précise  
+
+    }, 
+
+    trackUserLocation: true // suivi automatique de la position de l'utilisateur  
+
+}) 
+
+
+map.addControl(geolocateControl, 'bottom-right'); // ajout du contrôle en bas à droite de la carte  
+
+
+// A.4. Zoom et boussole  
+
+var view = new MapView({ 
+
+    container: "viewDiv", 
+
+    map: map 
+
+}); 
+
+ 
+var zoom = new Zoom({ 
+    view: view 
+}); 
+
+var compass = new Compass({ 
+
+    view: view 
+
+}); 
+
+
+view.ui.add(compass, "top-left"); 
