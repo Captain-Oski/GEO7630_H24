@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    position:absolute;
+    top:4.5%;
+    height: -webkit-fill-available;   
+    width: 75%;
+}
+
+#menu {
+    position: absolute;
+    top:4.5%;
+    right: 0;
+    width: 25%;
+}
+
+#titre {
+    padding: 20px;
+}
+#menu2 {
+    position: absolute;
+    top:4.5%;
+    left: 0;
+    width: 25%;
+}
+
+#menu3 {
+    position: relative;
+    top: 60%;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+}
+
+#boite {
+    margin: 10px;
+    padding: 20px;
+    background: ligthgrey;
+}
+
+#boite2 {
+    margin: 10px;
+    padding: 20px;
+    background: ligthgrey;
+}
+
+#bouton1 {
+    padding: 20px
+}
+
+#bouton2 {
+    padding: 20px
+}
+
+#bouton3 {
+    padding: 20px
+}
