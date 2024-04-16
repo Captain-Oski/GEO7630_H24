@@ -7,7 +7,7 @@ var map = new maplibregl.Map({
 });
 
 map.on('click', 'stationsBixi', function (e) {
-    var coordinates = _____________________________________ // Calcul des coordonnées du centre de la géométrie cliquée
+    var coordinates = _____________________________________ // Calcul des coordonnées du centre de la géométrie cliquée (indice utilisez turf.centroid)
   
     // Création du contenu du popup
     var popupContent = '<h3>' + e.features[0].properties.route_name + '</h3>'; // Vous pouvez personnaliser le contenu du popup en fonction de vos besoins
