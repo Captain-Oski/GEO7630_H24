@@ -1,12 +1,12 @@
 GEO7630H24 - EXAM #2
 
-25 avril 2023 14h00 
+16 avril 2024 17h30 
 
 Salle A-4160
 
 Chargé de cours : Clément Glogowski
 
-Démonstrateur : Maddie Le Gall
+Démonstrateur : Alexis-Raphael Gauthier
 
 
 ## Information sur l’examen
