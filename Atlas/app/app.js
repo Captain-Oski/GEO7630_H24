@@ -56,7 +56,7 @@ const myLayers = ['grid', 'buffer', 'rdp', 'union', 'joined']
 // Cette fonction est appelée lorsque la carte est chargée.
 map.on('load', function () {
     // Charge une couche de points aléatoires.
-    loadRandomPointsLayer()
+    // loadRandomPointsLayer()
     // Ajoute un contrôle de légende personnalisé.
     // Lab 12
     // map.addControl(new MaplibreLegendControl({ 
@@ -84,3 +84,5 @@ map.on('idle', function () {
     });
     // alert('test')
 });
+
+

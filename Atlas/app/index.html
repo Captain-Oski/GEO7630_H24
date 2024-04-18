@@ -1,16 +1,15 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>Indice d'équité des mileux de vie - 2024</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <title>GEO7630</title>
+ <!--//le titre de la page, qui apparaîtra dans l'onglet sur lequel la page est chargée.-->
+  <title>GEO7630 : Indice d'équité des milieux de vie - 2024</title>
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" />
   <link rel="stylesheet" type="text/css" href="./app.css" />
   <link rel="stylesheet" type="text/css" href="./sidebar/sidebar.css" />
@@ -26,8 +25,7 @@
     crossorigin="anonymous"></script>
 
   <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
-
-
+  
 </head>
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="bootstrap" viewBox="0 0 118 94">
@@ -209,7 +207,16 @@
         </ul>
       </div>
     </div>
-
+    <div id="rightMenu" class="container-fluid bg-dark">
+      <div class="row" style="padding: 10px; height: 100%;">
+        <div class="col" style="height: 100%;">
+          <h5 class="card-title text-white"></h5>
+          <p class="card-text flex-grow-1 text-white">
+          </p>
+        </div>
+      </div>
+    </div> 
+ 
 <!-- 
     <div id="bottomMenu" class="container-fluid bg-dark">
       <div class="row" style="padding: 10px; height: 100%;">
@@ -273,6 +280,8 @@
         </div>
       </div>
     </div> -->
+ 
+  
 
     <div id="Equipe1"></div>
     <div id="Equipe2"></div>
@@ -289,15 +298,15 @@
     crossorigin="anonymous"></script>
 
   <div id="map"></div>
-  <div class="map-overlay top">
-    <button class="btn btn-sm" type="button" id="resetMap">Reset map</button>
+  <!--<div class="map-overlay top">
+   <button class="btn btn-sm" type="button" id="resetMap">Reset map</button>
     <button class="btn btn-sm" type="button" id="loadLayer">Load Layer</button>
     <div class="map-overlay-inner">
-        <span class="" id="inputGroup-sizing-sm">Qté à l'écran</span>
+       <span class="" id="inputGroup-sizing-sm">Qté à l'écran</span>
       <input id="featureCount" disabled placeholder="" type="text" class="" aria-label="Small"
         aria-describedby="inputGroup-sizing-sm">
     </div>
-  </div>
+  </div>-->
   <!-- Bootstrap core JavaScript -->
   <!-- ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
@@ -317,20 +326,24 @@
 
     <!-- ===================Cours 11================== -->
 
-  <script type='text/javascript' src="./modules/layerHandler.js"></script>
+  <!-- <script type='text/javascript' src="./modules/layerHandler.js"></script>
   <script type='text/javascript' src="./modules/dynamicCounting.js"></script>
   <script type='text/javascript' src="./modules/union.js"></script>
   <script type='text/javascript' src="./modules/createRandomPoints.js"></script>
   <script type='text/javascript' src="./modules/createGrid.js"></script>
   <script type='text/javascript' src="./modules/calculateDistance.js"></script>
   <script type='text/javascript' src="./modules/buffering.js"></script>
-  <script type='text/javascript' src="./modules/spatialJoin.js"></script>
+  <script type='text/javascript' src="./modules/spatialJoin.js"></script> -->
   
   <!-- ==============Lab11 modules injection ============================ -->
 
-  <script type='text/javascript' src="./modules/lab11/renderClusters.js"></script>
+  <!-- <script type='text/javascript' src="./modules/lab11/renderClusters.js"></script>
   <script type='text/javascript' src="./modules/lab11/renderHeatmap.js"></script>
-  <script type='text/javascript' src="./modules/lab11/render3D.js"></script>
+  <script type='text/javascript' src="./modules/lab11/render3D.js"></script> -->
+  
 
+ 
+ 
 </body>
+
 </html>
