@@ -32,5 +32,3 @@ function Piste() {
 document
     .getElementById('Piste') // j'ai changé, et j'ai mis click et boutton pour essayer d'afficher ma couche, je pense que c'est un problème de source 
     .addEventListener('click', Piste);
-
-    // salut clément
