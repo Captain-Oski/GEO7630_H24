@@ -28,5 +28,5 @@ function Piste() {
 // Ajouter un événement de clic sur le bouton "loadLayer" 
 // pour charger la couche de points aléatoires
 document
-    .getElementById('Piste')
+    .getElementById('Piste') // j'ai changé, et j'ai mis click et boutton pour essayer d'afficher ma couche, je pense que c'est un problème de source 
     .addEventListener('click', Piste);
