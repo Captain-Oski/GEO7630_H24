@@ -19,3 +19,14 @@
     background-color: blueviolet;
 
 }
+
+#leftMenu {
+    position:absolute;
+    right:100%;
+    /* top:0; */
+    bottom:0%;
+    height: 20vh;  
+    width: 63%;
+    background-color: rgb(226, 223, 43);
+
+}
