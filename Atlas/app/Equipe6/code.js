@@ -46,7 +46,10 @@ function addDataToMap() {
        'id': 'pistes_cyclables_agreables',
        'type': 'line', 
        'source': 'pistes_cyclables_agreables-source',
-      'source-layer': 'FH791176.pistes_cyclables_agreables'
+      'source-layer': 'FH791176.pistes_cyclables_agreables',
+      'paint': {
+        'line-width': 1.5
+      }
    });
 
     map.addLayer({
