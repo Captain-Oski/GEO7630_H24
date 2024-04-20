@@ -1,15 +1,14 @@
 ///filtre_famille
 ///filtre les donnees selon le clic du bouton, la function peut etre a definir, je ne suis pas sûr de la fonction de ce mot exactement
 ///mettre le bon nom de bouton
-document.getElementById('BUTTON_TO_BE_NAMED').addEventListener('click', function() {
+document.getElementById('filtre_famille').addEventListener('click', function() {
     // Define the mapbox line layer
-    map.setFilter('pistes_cyclables_agreables', [
-        'match',
-        ['get', 'ind_fam_norm'], // Changed from 'ind_utop' to 'ind_fam'
-        0, 15, 'red', // If ind_fam is between 0 and 15, color it red
-        15, 30, 'yellow', // If ind_fam is between 15 and 30, color it yellow
-        30, Infinity, 'green', // If ind_fam is 30 or over, color it green
-        'gray' // Default color for values not matched by any case
+    map.setPaintProperty('pistes_cyclables_agreables', 'line-color', [
+        'case',
+        ['<', ['get', 'ind_fam_norm'], 15], 'red',
+        ['<', ['get', 'ind_fam_norm'], 30], 'yellow',
+        ['>=', ['get', 'ind_fam_norm'], 30], 'green',
+        'gray'  // Default color
     ]);
 });
 
@@ -17,15 +16,14 @@ document.getElementById('BUTTON_TO_BE_NAMED').addEventListener('click', function
 
 ///filtre les donnees selon le clic du bouton, la function peut etre a definir, je ne suis pas sûr de la fonction de ce mot exactement
 ///mettre le bon nom de bouton
-document.getElementById('BUTTON_TO_BE_NAMED').addEventListener('click', function() {
+document.getElementById('filtre_sportif').addEventListener('click', function() {
     // Define the mapbox line layer
-    map.setFilter('pistes_cyclables_agreables', [
-        'match',
-        ['get', 'ind_sport'], // Changed from 'ind_utop' to 'ind_sport'
-        0, 15, 'red', // If ind_sport is between 0 and 15, color it red
-        15, 30, 'yellow', // If ind_sport is between 15 and 30, color it yellow
-        30, Infinity, 'green', // If ind_sport is 30 or over, color it green
-        'gray' // Default color for values not matched by any case
+    map.setPaintProperty('pistes_cyclables_agreables', 'line-color', [
+        'case',
+        ['<', ['get', 'ind_sport'], 15], 'red',
+        ['<', ['get', 'ind_sport'], 30], 'yellow',
+        ['>=', ['get', 'ind_sport'], 30], 'green',
+        'gray'  // Default color
     ]);
 });
 
@@ -33,14 +31,13 @@ document.getElementById('BUTTON_TO_BE_NAMED').addEventListener('click', function
 
 ///filtre les donnees selon le clic du bouton, la function peut etre a definir, je ne suis pas sûr de la fonction de ce mot exactement
 ///mettre le bon nom de bouton
-document.getElementById('BUTTON_TO_BE_NAMED').addEventListener('click', function() {
+document.getElementById('filtre_utop').addEventListener('click', function() {
     // Define the mapbox line layer
-    map.setFilter('pistes_cyclables_agreables', [
-        'match',
-        ['get', 'ind_utop'],
-        0, 15, 'red', // If ind_utop is between 0 and 15, color it red
-        15, 30, 'yellow', // If ind_utop is between 15 and 30, color it yellow
-        30, Infinity, 'green', // If ind_utop is 30 or over, color it green
-        'gray' // Default color for values not matched by any case
+    map.setPaintProperty('pistes_cyclables_agreables', 'line-color', [
+        'case',
+        ['<', ['get', 'ind_utop'], 15], 'red',
+        ['<', ['get', 'ind_utop'], 30], 'yellow',
+        ['>=', ['get', 'ind_utop'], 30], 'green',
+        'gray'  // Default color
     ]);
 });
