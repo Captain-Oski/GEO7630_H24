@@ -65,6 +65,13 @@ function addDataToMap() {
     });
 }
 
+function adjustMapDisplay() {
+    var mapContainer = document.getElementById('map');
+    mapContainer.style.height = '100%'; // Change la hauteur pour la fonction spécifique
+}
+
+
 map.on('load', function() {
     addDataToMap();
+    adjustMapDisplay();
 });
