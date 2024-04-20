@@ -3,7 +3,7 @@ var map = new maplibregl.Map({
     container: 'map', // identifiant de l'élément HTML conteneur de la carte
     style: 'https://api.maptiler.com/maps/844ceac7-1626-4655-8d90-45433d56d02b/style.json?key=ldEZwRKSd58kyBXzxzqw', // URL du style de la carte
     center: [-73.55, 45.55], // position centrale de la carte
-    zoom: 9, // niveau de zoom initial
+    zoom: 10, // niveau de zoom initial
     hash: true // activation du hash pour la gestion de l'historique de la carte
 });
 
@@ -48,6 +48,7 @@ function addDataToMap() {
        'source': 'pistes_cyclables_agreables-source',
       'source-layer': 'FH791176.pistes_cyclables_agreables',
       'paint': {
+        'line-color': '#FF0000',
         'line-width': 1.5
       }
    });
@@ -64,6 +65,6 @@ function addDataToMap() {
     });
 }
 
-document.getElementById('loadDataButton').addEventListener('click', function() {
+map.on('load', function() {
     addDataToMap();
 });
