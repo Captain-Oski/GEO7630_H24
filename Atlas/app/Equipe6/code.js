@@ -59,10 +59,12 @@ function addDataToMap() {
         'source': 'zone_travaux-source',
         'source-layer': 'FH791176.zone_travaux',
         'paint': {
-            'line-color': '#FF0000',
-            'line-width': 5
+            'line-color': '#e86609',
+            'line-width': 20
         }
     });
+
+
 }
 
 function adjustMapDisplay() {
@@ -71,7 +73,7 @@ function adjustMapDisplay() {
     mapContainer.style.bottom = 0; // Change la hauteur pour la fonction spécifique
 
     // Enlever la petite boîte conne
-    var petite_boite_conne = document.getElementById('inputGroup-');
+    var petite_boite_conne = document.querySelector('.map-overlay-inner');
     if(petite_boite_conne) {
         petite_boite_conne.style.display = 'none';
     }
