@@ -1,21 +1,17 @@
 #bottomMenu {
-    position:absolute;
-    right:23%;
-    /* top:0; */
-    bottom:0%;
-    height: 20%;  
+    position: absolute;
+    right: 23%;
+    bottom: 0%;
+    height: 20%;
     width: 65%;
-    background-color: red;
+    background-color: rgba(33, 37, 40, 1);
 }
 
-
 #rightMenu {
-    position:absolute;
-    right:0%;
-    /* top:0; */
-    bottom:0%;
-    height: 100vh;  
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    height: 100vh;
     width: 23%;
-    background-color: blueviolet;
-
+    background-color: rgba(33, 37, 40, 1);
 }

@@ -1,33 +1,82 @@
-   
-  <div id="bottomMenu" class="container-fluid bg-dark">
+<div id="bottomMenu" class="container-fluid bg-dark">
     <div class="row" style="padding: 10px; height: 100%;">
-        <div class="col" style="height: 100%;">
-            <div class="card" style="height: 100%;">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Equipe1</h5>
-                    <p class="card-text flex-grow-1">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
-                </div>
+      <div class="col" style="height: 100%">
+        <div class="card" style="height: 100%;">
+          <div class="card-body d-flex flex-column;">
+            <h5 class="card-title">Equipe1 : vélos et environnement</h5>
+            <p class="card-text flex-grow-1"></p>
+            <label for="customRange3" class="form-label">Années</label>
+            <div class="d-flex align-items-center">
+              <div class="container">
+                <input type="range" value="2014" class="slider" id="myRange" list="tickmarks">
+                <datalist id="tickmarks">
+                  <option value="2014">
+                  <option value="2019">
+                  <option value="2020">
+                  <option value="2021">
+                  <option value="2022">
+                  <option value="2023">
+                </datalist>
+                <output id="output">0</output>
+              </div>
+              <div class="btn-group ms-2" role="group" aria-label="Basic example">
+                <button id="playButton" type="button" class="btn btn-primary">Play</button>
+                <button id="stopButton" type="button" class="btn btn-primary">Stop</button>
+                <button id="point2014" type="button" class="btn btn-primary" >2014</button>
+                <button id="point2019" type="button" class="btn btn-primary">2019</button>
+                <button id="point2020" type="button" class="btn btn-primary">2020</button>
+                <button id="point2021" type="button" class="btn btn-primary">2021</button>
+                <button id="point2022" type="button" class="btn btn-primary">2022</button>
+                <button id="point2023" type="button" class="btn btn-primary">2023</button>
+
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
   </div>
-
-  <div id="rightMenu" class="container-fluid bg-dark">
-    <div class="row" style="padding: 10px; height: 100%;">
+  <div id="rightMenu" class="container-fluid bg-dark d-flex align-items-center justify-content-center">
+    <div class="row" style="padding: 10px; height: 100%">
       <div class="col" style="height: 100%;">
-          <div class="card" style="height: 100%;">
-              <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text flex-grow-1">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
+        <div class="card" style="height: 100%;">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">QUALITÉ ENVIRONNEMENTALE DES FLUX DE VÉLOS À MONTRÉAL</h5>
+            <p class="card-text">L’objectif du projet est de mettre en avant la qualité environnementale des principaux flux de vélos au sein de la Ville de Montréal. Ainsi, en agrégeant diverses données (qualité de l’air, îlots de chaleur urbain, mesures acoustiques, collisions routières) sous forme d’un indice intégré, il sera possible de visualiser les zones, tronçons de routes et/ou pistes cyclables où un trajet à vélo possède le plus faible impact théorique sur la santé et la sécurité de l’utilisateur. À l’aide de données temporelles, il sera également possible de constater si l’implantation du Réseau Express Vélo (REV) a eu un impact sur les flux, et s’il a permis de favoriser les itinéraires ayant une qualité environnementale satisfaisante pour les cyclistes.</p>
+        
+            <div class="button-group">
+              <span class="label">Indicateurs environnementaux :</span>
+              <div class="button-container">
+                <button type="button" id="collisionBtn" class="btn btn-outline-primary">Collision routière</button>
+                <button type="button" id="chaleurBtn" class="btn btn-outline-primary">Îlots de chaleur</button>
+                <button type="button" id="qualiteAirBtn" class="btn btn-outline-primary">Qualité de l'air</button>                
               </div>
           </div>
-      </div>
+          
+        
+    </div>
   </div>
   </div>
+  <link rel="stylesheet" type="text/css" href="./app.css">
 
-<script rel="stylesheet" src="app.css"></script>
-<!-- ================================================== -->
-<script type='text/javascript' src="code.js"></script>
-<!-- ================================================== -->
+  <!-- ================================================== -->
+  <script type='text/javascript' src="./code.js"></script>
+  <!-- ================================================== -->
+  <script type='text/javascript' src="./animation.js"></script>
+  
+  <script type='text/javascript' src="./range.js"></script>
+
+  <script type='text/javascript' src="./2014.js"></script>
+
+  <!-- <script type='text/javascript' src="./liste.js"></script> -->
+
+  <script type='text/javascript' src="./collision.js"></script>
+
+  <script type='text/javascript' src="./ilot_chaleur.js"></script>
+
+
+  <script type='text/javascript' src="./2019.js"></script>
+  <script type='text/javascript' src="./2020.js"></script>
+  <script type='text/javascript' src="./2021.js"></script>
+  <script type='text/javascript' src="./2022.js"></script>
+  <script type='text/javascript' src="./2023.js"></script>
