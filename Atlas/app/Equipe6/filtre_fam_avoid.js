@@ -4,7 +4,7 @@
 ///mettre le bon nom de bouton
 ///cette fonction fait flasher un buffer autour des troncons à eviter pour les familles dont l'épaisseur s'ajuste en fonction du niveau de zoom
 
-document.getElementById('BUTTON_TO_BE_NAMED').addEventListener('click', function() {
+document.getElementById('filtre_fam_avoid').addEventListener('click', function() {
     var flashing = true;
     var interval;
 
