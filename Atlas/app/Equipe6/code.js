@@ -48,7 +48,7 @@ function addDataToMap() {
        'source': 'pistes_cyclables_agreables-source',
       'source-layer': 'FH791176.pistes_cyclables_agreables',
       'paint': {
-        'line-color': '#FF0000',
+        'line-color': 'white',
         'line-width': 1.5
       }
    });
@@ -66,12 +66,39 @@ function addDataToMap() {
 }
 
 function adjustMapDisplay() {
+    // Ajuster la hauteur de la carte
     var mapContainer = document.getElementById('map');
-    mapContainer.style.height = '100%'; // Change la hauteur pour la fonction spécifique
+    mapContainer.style.bottom = 0; // Change la hauteur pour la fonction spécifique
+
+    // Enlever la petite boîte conne
+    var petite_boite_conne = document.getElementById('inputGroup-');
+    if(petite_boite_conne) {
+        petite_boite_conne.style.display = 'none';
+    }
 }
 
 
+/*var tiffUrl = "https://uqam.maps.arcgis.com/sharing/rest/content/items/b448abfa2ef643c29f9ec046df014069/data";
+ 
+      // Create an ImageryLayer from the TIFF file URL
+
+      var imageryLayer = new ImageryLayer({
+
+        url: tiffUrl
+
+      });
+ 
+      // Add the imagery layer to the map
+
+      map.add(imageryLayer);*/
+
 map.on('load', function() {
     addDataToMap();
-    adjustMapDisplay();
+    adjustMapDisplay()
 });
+
+/*
+document.addEventListener('DOMContentLoaded', function() {
+    var mapContainer = document.getElementById('map');
+    mapContainer.style.bottom = '0'
+})*/
