@@ -39,7 +39,17 @@ function addDataToMap() {
         maxzoom: 22
     });
 
+    map.addSource('mnt_mtl_source', {
+        "type": "raster",
+        "url": "https://api.maptiler.com/tiles/73f5dbec-a07a-4f7b-8675-5bd6c95a9f31/tiles.json?key=aTduDGknA5FImwpiM7cU",
+        "tileSize": 256
+    });
 
+    map.addLayer({
+        'id':'mnt_mtl',
+        'type':'raster',
+        'source': 'mnt_mtl_source'
+    });
     
     // Ajouter les couches
     map.addLayer({
@@ -64,7 +74,7 @@ function addDataToMap() {
         }
     });
 
-
+    
 }
 
 function adjustMapDisplay() {
