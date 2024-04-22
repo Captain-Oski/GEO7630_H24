@@ -1,8 +1,6 @@
-// Fonction qui écoute l'événement de fin de chargement de la carte au démarrage de l'app
-
 // ajout des sources et des couches de la carte
 
-function loadLayer() {
+function iqa_par_station() {
     // ajout de la source station iqa
     map.addSource('iqa_par_station-source', {
         type: 'vector', // https://maplibre.org/maplibre-style-spec/sources/
@@ -47,5 +45,5 @@ function loadWFS() {
 
 
 document
-.getElementByld('loadLayer') // id unique du bouton 
-.addEventListener ('click', loadLayer);
+.getElementByld('iqa_par_station') // id unique du bouton 
+.addEventListener ('click', iqa_par_station);
