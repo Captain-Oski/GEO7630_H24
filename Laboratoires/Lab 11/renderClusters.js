@@ -5,7 +5,7 @@ function generateClusters () {
     removeAllLayersAndSources();
 
     // Ajout d'une source de données à la carte avec clustering
-    map.addSource('clusters-source', {
+    map.addSource('clusters-sou rce', {
         type: 'geojson',          // Type de la source de données : géojson
         data: randomPoints,       // Données à utiliser pour la source
         cluster: true,            // Activation du clustering pour regrouper les points proches

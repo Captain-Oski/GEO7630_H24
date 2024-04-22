@@ -1,12 +1,48 @@
    
   <div id="bottomMenu" class="container-fluid bg-dark">
     <div class="row" style="padding: 10px; height: 100%;">
-        <div class="col" style="height: 100%;">
+        <div class="col" style="height: 90%;">
+            <!--Création menu déroulant-->
+            <div class="dropdown">
+                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Choississez votre arrondissement
+                </button>
+                
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  
+
+                </ul>
+              </div>
+              <!--item 3 boites-->
+              
+              <!--BOITE BLANCHE BOTTOM-->
             <div class="card" style="height: 100%;">
                 <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Equipe3</h5>
-                    <p class="card-text flex-grow-1">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
+                    <h5 class="card-title">Niveau de risque de la qualité de l'air</h5>
+                    <p class="card-text flex-grow-1">BLABLABLA.</p>
+                    <a href="#" class="btn btn-primary mt-auto">button</a>
+                
+
                 </div>
             </div>
         </div>
@@ -18,9 +54,49 @@
       <div class="col" style="height: 100%;">
           <div class="card" style="height: 100%;">
               <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text flex-grow-1">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
+                  <h5 class="card-title">Niveau de risque de la qualité de l'air</h5>
+                  <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <!--Menu déroulant sur les risques d ela qualité de l'air-->
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Risque Faible
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>La qualité de l'air ne présente peu ou pas de risque sur la santé.</strong>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Risque Modéré
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>La qualité de l'air peut présenter des risques sur la santé pour les personnes vulnérables.</strong>. Une longue exposition peut porter atteinte à la santé notament sur les perosnnes vulnérables, tel que les personnées atteintes de problèmes respiratoires, de maladie cardiaques, de maladie chroniques, les femmes enceintes les enfants de moins de 5 ans et les perosnnes âgées.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Risque Elevé
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>La qualité de l'air présente des risques sur la santé pour l'ensemble de la population.</strong> Une longue exposition porte atteinte à la santé et peut provoquer des symptômes d'irritaiton des yeux, des difficulté respiratoires et une éventuelle inflamation des voies repsiratoires.
+                          Les activités en extérieures sont déconseillées.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="card-text flex-grow-1">
+                  <a href="#" class="btn btn-primary mt-auto">button</a>
               </div>
           </div>
       </div>
