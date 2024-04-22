@@ -1,12 +1,13 @@
 function Piste() {
 
-
-        map.addSource('DD891050.piste_cyclabe_2-source', {
+// Ajout de source vectorielle à la carte de l'équipe 7:
+        map.addSource('DD891050.piste_cyclabe_2-source', { 
             'type': 'vector',
             'tiles': [ "https://redesigned-doodle-r44qr9j4v5x4fpxv9-8801.app.github.dev/DD891050.piste_cyclabe_2/{z}/{x}/{y}.pbf "]
              
             
         });
+        // Ajout de couche de type line pour générer les pistes cyclables
         map.addLayer({
             'id': 'DD891050.piste_cyclabe_2',
             'type': 'line',
@@ -14,12 +15,12 @@ function Piste() {
             'source-layer': 'DD891050.piste_cyclabe_2',
         
             
-        
+        // Dêfinition du style des couches 
             'paint': {
-                "line-color": "rgba(189, 19, 19, 1)",
-                "line-opacity": 1,
-                "line-width": 1,
-                "line-translate-anchor": "map"
+                "line-color": "rgba(189, 19, 19, 1)", // utilisation des codes couleurs rouge, vert, bleu, alpha pour styliser la couche
+                "line-opacity": 1, // Opacité de 1 = 100%
+                "line-width": 1, // largeur =1
+                "line-translate-anchor": "map" // 
             }
         });
     };
@@ -35,17 +36,18 @@ function Piste() {
 
     
 
+    const PisteCyclabe = document.querySelector('#PisteCyclabeCheckbox'); // Ajout d'une constante piste cyclable pour l'action checkbox
 
-    const PisteCyclabe = document.querySelector('#PisteCyclabeCheckbox'); 
-
-    PisteCyclabe.addEventListener('change', (event) => {
-        if(event.target.checked) {
+    PisteCyclabe.addEventListener('change', (event) => { // Ecoute de l'evenement change pour la checkbox
+        if(event.target.checked) { // Si l'action checking est faite, afficher les pistes cyclables, 
             Piste()
         }
 
-        else  {
+        else  {//sinon, retirer-les
 
- console.log("else");
+
+   // Supprimer la couche de la carte
+   map.removeLayer('DD891050.piste_cyclabe_2');
 
         }
 

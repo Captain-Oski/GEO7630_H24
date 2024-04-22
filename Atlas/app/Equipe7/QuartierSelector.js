@@ -1,42 +1,29 @@
 function QuartierDisplay() {
+    
+    // Ajout de la source de données des quartiers
+    map.addSource('DD891050.Quartier-source', {
+        type: 'vector', // Type de source de données vecteur 
+        tiles: "https://redesigned-doodle-r44qr9j4v5x4fpxv9-8801.app.github.dev/DD891050.Quartier/{z}/{x}/{y}.pbf" // URL de la source
+    });
 
-        // Ajout de la source de données des arrondissements depuis pgFeatureServ
-    
-        map.addSource('DD891050.Quartier-source', {
-    
-            type: 'vector', // Type de source de données
-    
-            tiles: "https://redesigned-doodle-r44qr9j4v5x4fpxv9-8801.app.github.dev/DD891050.Quartier/{z}/{x}/{y}.pbf" // URL pgFeatureServ GeoJSON
-    
-        });
-    
-        // Ajout de la couche des arrondissements à la carte MapLibre
-    
-        map.addLayer({
-    
-            'id': 'Quartier', // Identifiant de la couche
-    
-            'type': 'fill', // Type de géométrie de la couche (remplissage)
-    
-            'source': 'Quartier-source', // Source des données de la couche
-
-            'source-layer': 'Quartier-source',
-    
-            "layout": {"visibility": "visible"},
-            "paint": {
-              "fill-color": "rgba(0, 233, 242, 1)",
-              "fill-antialias": false,
-              "fill-outline-color": [
+    // Ajout de la couche des quartiers
+    map.addLayer({
+        'id': 'Quartier', // Identifiant de la couche
+        'type': 'fill', // Type de géométrie de la couche (remplissage)
+        'source': 'DD891050.Quartier-source', // Source des données de la couche
+        'source-layer': 'Quartier', // Nom de la couche dans la source de données
+        "layout": {"visibility": "visible"}, // Visibilité de la couche
+        "paint": {
+            "fill-color": "rgba(0, 233, 242, 1)",// Choisir couleur cyan
+            "fill-antialias": false,//aucun remplissage
+            "fill-outline-color": [//Afficher les propriétés des arrondissements ou quartiers
                 "get",
                 "nom_qr"
-              ],
-              "fill-translate-anchor": "map"
-            }
-    
-        });
-    
-    }
-
+            ],
+            "fill-translate-anchor": "map"// 
+        }
+    });
+}
 
 
     
@@ -52,12 +39,22 @@ function QuartierDisplay() {
 
     
 
+//
+    const QuartierMontreal = document.querySelector('#QuartierMontrealCheckbox'); // Ajouter une contante Quartier de Montreal pour checkbox
 
-    const QuartierMontreal = document.querySelector('#QuartierMontrealCheckbox'); 
-
-    QuartierMontreal.addEventListener('change', (event) => {
-        if(event.target.checked) {
+    QuartierMontreal.addEventListener('change', (event) => { // Ecoute de l'évènement change pour la checkbox
+        if(event.target.checked) { // Si l'action est faite, afficher Quartier
             QuartierDisplay()
         }
-    });
+
+        else  {//sinon, retirer-les
+
+
+            // Supprimer la couche de la carte
+            map.removeLayer('DD891050.Quartier');
+         
+                 }
+         
+             });
+   
     
