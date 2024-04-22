@@ -1,4 +1,5 @@
 function generateArret() {
+
     map.addSource('DD891050.arret_de_bus-source', { // Ajouter source Arrêts de bus
         'type': 'vector',
         'tiles': ["https://redesigned-doodle-r44qr9j4v5x4fpxv9-8801.app.github.dev/DD891050.arret_de_bus/{z}/{x}/{y}.pbf"]
@@ -34,11 +35,16 @@ function generateArret() {
             generateArret()
         }
 
-        else  {
+        
+            else  {//sinon, retirer-les
 
- console.log("else");
 
-        }
+                // Supprimer la couche de la carte
+                map.removeLayer('DD891050.arret_de_bus');
+             
+                     }
+             
+                 });
+       
 
-    });
     
