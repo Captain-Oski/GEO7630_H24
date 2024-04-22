@@ -1,17 +1,17 @@
-function Piste() {
+function Velo() {
 
 
-        map.addSource('DD891050.piste_cyclabe_2-source', {
+        map.addSource('DD891050.trajet_velo', {
             'type': 'vector',
-            'tiles': [ "https://redesigned-doodle-r44qr9j4v5x4fpxv9-8801.app.github.dev/DD891050.piste_cyclabe_2/{z}/{x}/{y}.pbf "]
+            'tiles': [ "https://redesigned-doodle-r44qr9j4v5x4fpxv9-8801.app.github.dev/DD891050.trajet_velo/{z}/{x}/{y}.pbf"]
              
             
         });
         map.addLayer({
-            'id': 'DD891050.piste_cyclabe_2',
+            'id': 'DD891050.trajet_velo',
             'type': 'line',
-            'source': 'DD891050.piste_cyclabe_2-source',
-            'source-layer': 'DD891050.piste_cyclabe_2',
+            'source': 'DD891050.trajet_velo-source',
+            'source-layer': 'DD891050.trajet_velo',
         
             
         
@@ -36,11 +36,11 @@ function Piste() {
     
 
 
-    const PisteCyclabe = document.querySelector('#PisteCyclabeCheckbox'); 
+    const TrajetVelo = document.querySelector('#TrajetVeloCheckbox'); 
 
-    PisteCyclabe.addEventListener('change', (event) => {
+    TrajetVelo.addEventListener('change', (event) => {
         if(event.target.checked) {
-            Piste()
+            Velo()
         }
 
         else  {

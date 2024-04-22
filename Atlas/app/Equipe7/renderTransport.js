@@ -1,17 +1,17 @@
-function Piste() {
+function Transport() {
 
 
-        map.addSource('DD891050.piste_cyclabe_2-source', {
+        map.addSource('DD891050.ligne_de_transport-source', {
             'type': 'vector',
-            'tiles': [ "https://redesigned-doodle-r44qr9j4v5x4fpxv9-8801.app.github.dev/DD891050.piste_cyclabe_2/{z}/{x}/{y}.pbf "]
+            'tiles': [ "https://redesigned-doodle-r44qr9j4v5x4fpxv9-8801.app.github.dev/DD891050.ligne_de_transport/{z}/{x}/{y}.pbf"]
              
             
         });
         map.addLayer({
-            'id': 'DD891050.piste_cyclabe_2',
+            'id': 'DD891050.ligne_de_transport',
             'type': 'line',
-            'source': 'DD891050.piste_cyclabe_2-source',
-            'source-layer': 'DD891050.piste_cyclabe_2',
+            'source': 'DD891050.ligne_de_transport-source',
+            'source-layer': 'DD891050.ligne_de_transport',
         
             
         
@@ -36,11 +36,11 @@ function Piste() {
     
 
 
-    const PisteCyclabe = document.querySelector('#PisteCyclabeCheckbox'); 
+    const LigneTransport = document.querySelector('#LigneTransportCheckbox'); 
 
-    PisteCyclabe.addEventListener('change', (event) => {
+    LigneTransport.addEventListener('change', (event) => {
         if(event.target.checked) {
-            Piste()
+            Transport()
         }
 
         else  {

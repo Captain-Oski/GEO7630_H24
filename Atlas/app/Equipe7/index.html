@@ -12,8 +12,8 @@
                           <div class="col">
                             
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id= "PisteCyclabe" >
-                                <label class="form-check-label" for= "PisteCyclabe" >
+                                <input class="form-check-input" type="checkbox" name="checkbox" value="" id="PisteCyclabeCheckbox" >
+                                <label class="form-check-label" for= "PisteCyclabeCheckbox" >
                                   piste cyclabe
                                 </label>
                               </div>
@@ -24,9 +24,9 @@
                            
                             
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                  Default checkbox
+                                <input class="form-check-input" type="checkbox" name="checkbox"  value="" id="ArretBusCheckbox">
+                                <label class="form-check-label" for="ArretBusCheckbox">
+                                  Arret de bus
                                 </label>
                               </div>
 
@@ -35,9 +35,9 @@
                             
                             
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                  Default checkbox
+                                <input class="form-check-input" type="checkbox" name="checkbox" value="" id="TrajetVeloCheckbox">
+                                <label class="form-check-label" for="TrajetVeloCheckbox">
+                                  Trajet Velo
                                 </label>
                               </div>
 
@@ -50,9 +50,9 @@
                           <div class="col">
                             
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                  Default checkbox
+                                <input class="form-check-input" type="checkbox" name="checkbox" value="" id="LigneTransportCheckboxt">
+                                <label class="form-check-label" for="LigneTransportCheckbox">
+                                  Ligne de Transport
                                 </label>
                               </div>
 
@@ -60,9 +60,9 @@
                           <div class="col">
                             
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                  Default checkbox
+                                <input class="form-check-input" type="checkbox" value="" id="QuartierMontrealCheckbox">
+                                <label class="form-check-label" for="QuartierMontrealCheckbox">
+                                  Quartier
                                 </label>
                               </div>
 
@@ -158,20 +158,29 @@
                   <h1 class="card-title">Zone d'activité</h1>
                   <p class="card-text flex-grow-1">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <a href="#" class="btn btn-danger mt-auto">haetmap</a>
-                  
-                  <button class="btn btn-primary" type="button" id="Piste">Piste Cyclabe</button>
 
+                  <button type="button" class="btn btn-primary" onclick="loadWFS()">Quartier</button>
+                  
+                  
               </div>
           </div>
       </div>
   </div>
   </div>
 
-  <script rel="stylesheet" src="app.css"></script>
-  <!-- ================================================== -->
+  <script rel="stylesheet" src="app.css"></script> 
+
   <script type='text/javascript' src="code.js"></script>
-  <!-- ================================================== -->
-  <script type='text/javascript' src="PisteCyclabe.js"></script>
+
+  <script type='text/javascript' src="PisteCyclabe.js"></script> 
+
+  <script type='text/javascript' src="renderArretBus.js"></script> 
+
+  <script type='text/javascript' src="renderTrajetVelo.js"></script> 
+
+  <script type='text/javascript' src="renderTransport.js"></script> 
+
+  <script type='text/javascript' src="QuartierSelector.js"></script> 
 
 
   
