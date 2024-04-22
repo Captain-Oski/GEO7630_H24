@@ -39,6 +39,13 @@ function addDataToMap() {
         maxzoom: 22
     });
 
+    map.addSource('mnt_mtl_source', {
+        "type": "raster",
+        "url": "https://api.maptiler.com/tiles/73f5dbec-a07a-4f7b-8675-5bd6c95a9f31/tiles.json?key=aTduDGknA5FImwpiM7cU",
+        "tileSize": 256
+    });
+
+
 
     
     // Ajouter les couches
@@ -80,28 +87,9 @@ function adjustMapDisplay() {
 }
 
 
-/*var tiffUrl = "https://uqam.maps.arcgis.com/sharing/rest/content/items/b448abfa2ef643c29f9ec046df014069/data";
- 
-      // Create an ImageryLayer from the TIFF file URL
-
-      var imageryLayer = new ImageryLayer({
-
-        url: tiffUrl
-
-      });
- 
-      // Add the imagery layer to the map
-
-      map.add(imageryLayer);*/
-
 map.on('load', function() {
     addDataToMap();
     adjustMapDisplay()
 });
 
-/*
-document.addEventListener('DOMContentLoaded', function() {
-    var mapContainer = document.getElementById('map');
-    mapContainer.style.bottom = '0'
-})*/
 
