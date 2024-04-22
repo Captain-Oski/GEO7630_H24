@@ -45,11 +45,7 @@ function addDataToMap() {
         "tileSize": 256
     });
 
-    map.addLayer({
-        'id':'mnt_mtl',
-        'type':'raster',
-        'source': 'mnt_mtl_source'
-    });
+    
     
     // Ajouter les couches
     map.addLayer({
