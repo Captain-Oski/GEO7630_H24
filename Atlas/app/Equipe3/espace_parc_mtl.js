@@ -3,7 +3,7 @@
    // Ajout de la source de données pour les espaces verts des parcs de Montréal
     map.addSource('espace_parc_mtl-source', {
       type: 'vector',
-      tiles: ['https://sturdy-fiesta-v669g4447rjgh6gxj-8801.app.github.dev/EG591962.espace_vert_parc/{z}/{x}/{y}.pbf'], // URL des espaces parcs
+      tiles: ['https://sturdy-fiesta-v669g4447rjgh6gxj-8801.app.github.dev/EG591962.espace_parc_mtl/{z}/{x}/{y}.pbf'], // URL des espaces parcs
       minzoom: 0,
       maxzoom: 22
     });

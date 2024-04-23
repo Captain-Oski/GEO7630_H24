@@ -1,0 +1,39 @@
+<Coordonnées GPS de Montréal></Coordonn>
+const montrealCoordinates = [-73.5673, 45.5017];
+
+<Initialisez la carte></Initialisez>
+const map = new maplibregl.Map({
+    container: 'map',
+    style: 'https://maps.geops.io/styles/travic_v2/style.json',
+    center: montrealCoordinates,
+    zoom: 10
+});
+
+<Ajout de l'image à la carte ></Ajout>
+map.on('load', function () {
+    <map name="" class="loadImage"></map>('https://revolvair.org/wp-content/uploads/2021/02/iqa-quebec-particules-fines.png', function (error, image) {
+        if (error) throw error;
+        <map name="" class="addImage"></map>('custom-marker', image);
+        <map name="" class="addLayer"></map>({
+            'id': 'markers',
+            'type': 'symbol',
+            'source': {
+                'type': 'geojson',
+                'data': {
+                    'type': 'FeatureCollection',
+                    'features': [{
+                        'type': 'Feature',
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': montrealCoordinates
+                        }
+                    }]
+                }
+            },
+            'layout': {
+                'icon-image': 'custom-marker',
+                'icon-size': 0.2
+            }
+        });
+    });
+});
