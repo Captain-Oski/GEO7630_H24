@@ -27,7 +27,7 @@ map.addControl(geolocateControl, 'bottom-right'); // ajout du contrôle en bas �
 
 // création du contrôle d'échelle
 var scale = new maplibregl.ScaleControl({
-    unit: 'metric' // utilisation de l'unité métrique
+    unit: 'metric' // choix de l'unité, ici métrique
 });
 
 

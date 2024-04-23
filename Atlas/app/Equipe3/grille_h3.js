@@ -8,7 +8,7 @@
 
         type: 'vector', // https://maplibre.org/maplibre-style-spec/sources/
 
-        URL: 'https://sturdy-fiesta-v669g4447rjgh6gxj-8801.app.github.dev/EG591962.h3_montreal/{z}/{x}/{y}.pbf'
+        URL: 'https://sturdy-fiesta-v669g4447rjgh6gxj-8801.app.github.dev/EG591962.h3_montreal/{z}/{x}/{y}.pbf' //URL des tuilles vectorielles
 // URL des tuiles vectorielles attention à bien mettre là votre
 
     })
