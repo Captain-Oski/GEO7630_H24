@@ -1,53 +1,28 @@
 function generateEspaceVert() {
-
-
-        map.addSource('DD891050.', {
-            'type': 'vector',
-            'tiles': [ ""]
-             
-            
-        });
-        map.addLayer({
-            'id': 'DD891050.',
-            'type': 'line',
-            'source': 'DD891050.-source',
-            'source-layer': 'DD891050.',
-        
-            
-        
-            'paint': {
-                "line-color": "rgba(189, 19, 19, 1)",
-                "line-opacity": 1,
-                "line-width": 1,
-                "line-translate-anchor": "map"
-            }
-        });
-    };
- 
-
-
-
-// Ajouter un événement de clic sur le bouton "loadLayer" 
-// pour charger la couche de points aléatoires
-//document
-   // .getElementById('Piste') // j'ai changé, et j'ai mis click et boutton pour essayer d'afficher ma couche, je pense que c'est un problème de source 
-   // .addEventListener('click', Piste);
-
-    
-
-
-    const TrajetVelo = document.querySelector('#TrajetVeloCheckbox'); 
-
-    TrajetVelo.addEventListener('change', (event) => {
-        if(event.target.checked) {
-            Velo()
-        }
-
-        else  {
-
- console.log("else");
-
-        }
-
+    map.addSource('DD891050.Espaces_Verts-source', {
+        'type': 'vector',
+        'tiles': ["https://shiny-trout-5ggj46wgpj7w37qjr-8801.app.github.dev/DD891050.Espaces_Verts/{z}/{x}/{y}.pbf"]
     });
-    
+    map.addLayer({
+        'id': 'DD891050.Espaces_Verts',
+        'type': 'fill', // Changé le type de géométrie à 'fill' pour afficher une zone remplie
+        'source': 'DD891050.Espaces_Verts-source',
+        'source-layer': 'DD891050.Espaces_Verts-source', // Correction de la valeur de source-layer
+        "paint": {
+            "fill-color": "rgba(62, 154, 76, 0.5)" // Modification de la couleur et ajout de l'opacité
+        }
+    });
+}
+
+const EspacesVerts = document.querySelector('#EspacesVertsCheckbox'); // Correction du nom de la constante
+
+EspacesVerts.addEventListener('change', (event) => {
+    if (event.target.checked) {
+        generateEspaceVert();
+    } else {
+        // Supprimer la couche de la carte
+        map.removeLayer('DD891050.Espaces_Verts');
+        // Supprimer la source de données de la carte
+        map.removeSource('DD891050.Espaces_Verts-source');
+    }
+});
