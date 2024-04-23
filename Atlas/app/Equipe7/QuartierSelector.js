@@ -36,7 +36,7 @@ QuartierMontreal.addEventListener('change', (event) => { // Ecoute de l'évènem
         // Supprimer la couche de la carte
     
 
-   // Supprimer la couche de la carte
+   // Supprimer la couche de la carte et la source de données 
    map.removeLayer('DD891050.Quartier');
    
    map.removeSource ('DD891050.Quartier-source')

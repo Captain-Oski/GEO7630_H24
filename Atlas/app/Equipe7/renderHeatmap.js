@@ -1,5 +1,5 @@
 function generateHeatmap() {
-    map.addSource('DD891050.trajet_velo-heatmap-source', {
+    map.addSource('DD891050.trajet_velo-heatmap-source', { // source s de données associé au heatMap
         'type': 'vector',
         'tiles': ["https://shiny-trout-5ggj46wgpj7w37qjr-8801.app.github.dev/DD891050.trajet_velo_heatmap/{z}/{x}/{y}.pbf"]
     });

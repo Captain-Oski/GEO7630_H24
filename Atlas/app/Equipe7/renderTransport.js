@@ -6,7 +6,7 @@ function Transport() {
     map.addLayer({
         'id': 'DD891050.ligne_de_transport',
         'type': 'line',
-        'source': 'DD891050.ligne_de_transport-source', // Correction ici
+        'source': 'DD891050.ligne_de_transport-source', 
         'source-layer': 'DD891050.ligne_de_transport',
         
         'paint': {

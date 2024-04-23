@@ -46,7 +46,7 @@ function Velo() {
         else  {//sinon, retirer-les
 
 
-            // Supprimer la couche de la carte
+            // Supprimer la couche de la carte et des source de données
             map.removeLayer('DD891050.trajet_velo');
             
             map.removeSource ('DD891050.trajet_velo-source')

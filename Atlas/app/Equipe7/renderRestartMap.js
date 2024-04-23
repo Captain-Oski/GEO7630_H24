@@ -1,15 +1,15 @@
 /**
- * Fonction pour générer une représentation 3D d'une grille sur une carte
+ // restart la carte pour effacer tout les cours sélectionnées
  */
 function Restart() {
-    // Affiche un message de test dans la console
+   
 
     // Supprime toutes les couches et sources existantes de la carte
     removeAllLayersAndSources();
 
 }
 
-// Ajoute un événement d'écoute du clic sur l'élément HTML avec l'ID 'generate3D'
+// Ajoute un événement d'écoute du clic sur l'action pour effacer les couches
 document
     .getElementById('Restart') // id unique du bouton
-    .addEventListener('click', Restart);  // ajoute un event de type click qui lance la fonction generate3D()
+    .addEventListener('click', Restart);  //effectuer la fonction clean

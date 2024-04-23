@@ -1,4 +1,4 @@
-
+// code create grid pour la creation de polygone pour la 3D
 // Cette fonction crée une grille hexagonale à partir d'une boîte englobante et y ajoute une propriété aléatoire à chaque hexagone.
 function makeGridH3() {
     // Définit les coordonnées de la boîte englobante.

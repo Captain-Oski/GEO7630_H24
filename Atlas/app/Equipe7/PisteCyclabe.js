@@ -46,7 +46,7 @@ function Piste() {
         else  {//sinon, retirer-les
 
 
-   // Supprimer la couche de la carte
+   // Supprimer la couche de la carte et supprimer la source
    map.removeLayer('DD891050.piste_cyclabe_2');
    
    map.removeSource ('DD891050.piste_cyclabe_2-source')

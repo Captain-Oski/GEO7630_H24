@@ -1,5 +1,6 @@
 /**
- * Fonction pour générer une représentation 3D d'une grille sur une carte
+ * Fonction pour générer une représentation 3D d'une grille sur une carte 
+ * // cette fonctoin a étét utilisé en cours, il on voulait l'utiliser pour un e analyse statistique 3D
  */
 function generate3D() {
     // Affiche un message de test dans la console

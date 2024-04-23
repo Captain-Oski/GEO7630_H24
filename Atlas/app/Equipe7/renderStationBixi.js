@@ -25,7 +25,7 @@ ParkingBixi.addEventListener('change', (event) => {
     } else {//sinon, retirer-les
 
 
-                // Supprimer la couche de la carte
+                // Supprimer la couche de la carte et sources des données
                 map.removeLayer('DD891050.station_bixi');
 
                 map.removeSource ('DD891050.station_bixi-source')

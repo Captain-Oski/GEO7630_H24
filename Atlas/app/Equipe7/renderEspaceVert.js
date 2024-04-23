@@ -1,5 +1,5 @@
 function generateEspaceVert() {
-    map.addSource('DD891050.Espaces_Verts-source', {
+    map.addSource('DD891050.Espaces_Verts-source', {// ajoute de la sorce de données
         'type': 'vector',
         'tiles': ["https://shiny-trout-5ggj46wgpj7w37qjr-8801.app.github.dev/DD891050.Espaces_Verts/{z}/{x}/{y}.pbf"]
     });
@@ -14,7 +14,7 @@ function generateEspaceVert() {
     });
 }
 
-const EspacesVerts = document.querySelector('#EspacesVertsCheckbox'); // Correction du nom de la constante
+const EspacesVerts = document.querySelector('#EspacesVertsCheckbox'); 
 
 EspacesVerts.addEventListener('change', (event) => {
     if (event.target.checked) {
