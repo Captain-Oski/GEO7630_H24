@@ -7,7 +7,7 @@ function generateEspaceVert() {
         'id': 'DD891050.Espaces_Verts',
         'type': 'fill', // Changé le type de géométrie à 'fill' pour afficher une zone remplie
         'source': 'DD891050.Espaces_Verts-source',
-        'source-layer': 'DD891050.Espaces_Verts-source', // Correction de la valeur de source-layer
+        'source-layer': 'DD891050.Espaces_Verts', // Correction de la valeur de source-layer
         "paint": {
             "fill-color": "rgba(62, 154, 76, 0.5)" // Modification de la couleur et ajout de l'opacité
         }

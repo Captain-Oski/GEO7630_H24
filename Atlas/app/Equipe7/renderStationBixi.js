@@ -8,7 +8,7 @@ function generateStationBixi() {
         'id': 'DD891050.station_bixi',
         'type': 'circle', // Utiliser le type de couche "circle" pour afficher des points
         'source': 'DD891050.station_bixi-source',
-        'source-layer': 'DD891050.station_bixi-source', // Correction ici
+        'source-layer': 'DD891050.station_bixi', // Correction ici
         'paint': {
             'circle-radius': 5, // Rayon du cercle
             'circle-color': 'rgba(189, 19, 19, 1)', // Couleur du cercle

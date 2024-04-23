@@ -8,7 +8,7 @@ function generateArret() {
         'id': 'DD891050.arret_de_bus',
         'type': 'circle', // Utiliser le type de couche "circle" pour afficher des points
         'source': 'DD891050.arret_de_bus-source',
-        'source-layer': 'DD891050.arret_de_bus-source', // Correction ici
+        'source-layer': 'DD891050.arret_de_bus', // Correction ici
         'paint': {
             'circle-radius': 5, // Rayon du cercle
             'circle-color': 'rgba(189, 19, 19, 1)', // Couleur du cercle
