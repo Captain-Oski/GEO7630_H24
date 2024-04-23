@@ -23,11 +23,11 @@ function generate3D() {
         'source': '3d-source',
         'type': 'fill-extrusion',
         'paint': {
-            // Définit la couleur de remplissage de l'extrusion en fonction de la valeur aléatoire 'randomValue'
+            // Définit la couleur de remplissage de l'extrusion en fonction de la valeur aléatoire 'DD891050.trajet_velo'
             'fill-extrusion-color': [                      // Définit la propriété fill-extrusion-color
                 'interpolate',                             // Utilise la fonction interpolate pour créer un dégradé
                 ['linear'],                                // Spécifie le type d'interpolation comme linéaire
-                ['get', ''],                    // Récupère la propriété 'randomValue' des données
+                ['get', 'DD891050.trajet_velo'],                    // Récupère la propriété 'DD891050.trajet_velo' des données
                 // Définit les étapes de couleur pour le dégradé
                 0, '#f3e79b',                               // À 0%, utilise la couleur #f3e79b
                 30, '#fac484',                              // À 30%, utilise la couleur #fac484
@@ -35,11 +35,11 @@ function generate3D() {
                 80, '#ce6693',                              // À 80%, utilise la couleur #ce6693
                 100, '#a059a0'                              // À 100%, utilise la couleur #a059a0
             ],
-            // Définit la hauteur de l'extrusion en fonction de la valeur aléatoire 'randomValue'
+            // Définit la hauteur de l'extrusion en fonction de la valeur aléatoire 'DD891050.trajet_velo'
             'fill-extrusion-height': [
                 'interpolate', ['linear'], // interpolation statistique linéaire
-                    ['get', 'randomValue'], // de la propriété randomValue
-                0, 100, // Notre propriété randomValue va de 0 à 100
+                    ['get', 'DD891050.trajet_velo'], // de la propriété DD891050.trajet_velo
+                0, 100, // Notre propriété DD891050.trajet_velo va de 0 à 100
                 100, 4000 // De 100m de hauteur pour la valeur 0 à 4km pour la valeur 100
             ],
             // Définit l'opacité de l'extrusion
