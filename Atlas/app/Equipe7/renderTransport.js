@@ -8,6 +8,7 @@ function Transport() {
         'type': 'line',
         'source': 'DD891050.ligne_de_transport-source', // Correction ici
         'source-layer': 'DD891050.ligne_de_transport-source',
+        
         'paint': {
             "line-color": "rgba(189, 19, 19, 1)",
             "line-opacity": 1,
