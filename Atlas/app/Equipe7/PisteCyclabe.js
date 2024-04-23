@@ -3,7 +3,7 @@ function Piste() {
 // Ajout de source vectorielle à la carte de l'équipe 7:
         map.addSource('DD891050.piste_cyclabe_2-source', { 
             'type': 'vector',
-            'tiles': [ "https://redesigned-doodle-r44qr9j4v5x4fpxv9-8801.app.github.dev/DD891050.piste_cyclabe_2/{z}/{x}/{y}.pbf "]
+            'tiles': [ "https://shiny-trout-5ggj46wgpj7w37qjr-8801.app.github.dev/DD891050.piste_cyclabe_2/{z}/{x}/{y}.pbf "]
              
             
         });
@@ -48,6 +48,8 @@ function Piste() {
 
    // Supprimer la couche de la carte
    map.removeLayer('DD891050.piste_cyclabe_2');
+   
+   map.removeSource ('DD891050.piste_cyclabe_2-source')
 
         }
 

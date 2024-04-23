@@ -1,9 +1,9 @@
 function Velo() {
 
 
-        map.addSource('DD891050.trajet_velo', {
+        map.addSource('DD891050.trajet_velo-source', {
             'type': 'vector',
-            'tiles': [ "https://redesigned-doodle-r44qr9j4v5x4fpxv9-8801.app.github.dev/DD891050.trajet_velo/{z}/{x}/{y}.pbf"]
+            'tiles': [ "https://shiny-trout-5ggj46wgpj7w37qjr-8801.app.github.dev/DD891050.trajet_velo/{z}/{x}/{y}.pbf"]
              
             
         });
@@ -43,11 +43,15 @@ function Velo() {
             Velo()
         }
 
-        else  {
+        else  {//sinon, retirer-les
 
- console.log("else");
 
-        }
+            // Supprimer la couche de la carte
+            map.removeLayer('DD891050.trajet_velo');
+            
+            map.removeSource ('DD891050.trajet_velo-source')
+         
+                 }
 
     });
     

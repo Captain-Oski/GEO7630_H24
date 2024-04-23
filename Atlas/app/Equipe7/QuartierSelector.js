@@ -3,7 +3,7 @@ function QuartierDisplay() {
     // Ajout de la source de données des quartiers
     map.addSource('DD891050.Quartier-source', {
         type: 'vector', // Type de source de données vecteur 
-        tiles: "https://redesigned-doodle-r44qr9j4v5x4fpxv9-8801.app.github.dev/DD891050.Quartier/{z}/{x}/{y}.pbf" // URL de la source
+        tiles: "https://shiny-trout-5ggj46wgpj7w37qjr-8801.app.github.dev/DD891050.Quartier/{z}/{x}/{y}.pbf" // URL de la source
     });
 
     // Ajout de la couche des quartiers
