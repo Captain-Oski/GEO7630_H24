@@ -1,14 +1,11 @@
 
-
-
-
-    // ajout de la source h3
-
+// ajout d'une fonction pour la grille_h3
+function grille_h3() {
     map.addSource('grille_h3', {
 
         type: 'vector', // https://maplibre.org/maplibre-style-spec/sources/
 
-        URL: 'https://sturdy-fiesta-v669g4447rjgh6gxj-8801.app.github.dev/EG591962.h3_montreal/{z}/{x}/{y}.pbf' //URL des tuilles vectorielles
+        URL: 'hhttps://sturdy-fiesta-v669g4447rjgh6gxj-8801.app.github.dev/EG591962.h3_montreal/{z}/{x}/{y}.pbf' //URL des tuilles vectorielles
 // URL des tuiles vectorielles attention à bien mettre là votre
 
     })
@@ -28,3 +25,7 @@
     })
 
 ;
+}// fin de la fonction 
+document 
+.getElementById('grille_h3')
+.addEventListener('click', grille_h3)

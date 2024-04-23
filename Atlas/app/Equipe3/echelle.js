@@ -1,4 +1,4 @@
-// Ajout de l'échelle
+//Essai de la création d'une échelle avec un maximum de 200
 const customScaleControl = new maplibregl.ScaleControl ({
     maxWidth: 200,
 
