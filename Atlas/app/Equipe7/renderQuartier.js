@@ -1,4 +1,10 @@
-
+function ChoixQuartier() {
+    
+    // Ajout de la source de données des quartiers
+    map.addSource('DD891050.Choix_Quartier-source', {
+        type: 'json', // Type de source de données vecteur 
+        tilesurl: "https://shiny-trout-5ggj46wgpj7w37qjr-9000.app.github.dev/collections/DD891050.Quartier/items.json" // URL de la source
+    });
 
 
 // Définition de la fonction quartiers

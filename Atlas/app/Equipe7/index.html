@@ -6,7 +6,7 @@
                 <div class="card-body d-flex flex-column">
 
 
-
+                  <h3 class="card-title">Choix</h3>
                     <div class="container"> 
                         <div class="row align-items-start">
                           <div class="col">
@@ -115,7 +115,7 @@
                       </div>
 
                       <div class="d-grid gap-2">
-                        <button class="btn btn-success" type="button">Restart Map</button>
+                        <button class="btn btn-success" type="button" id="Restart" >Restart Map</button>
                         
                       </div>
 
@@ -172,7 +172,7 @@
                       </p>
                      
                       <div class="d-grid gap-2">
-                        
+                        <button type=" button" class="btn btn-success" onclick="loadWFS()">Load WFS Data</button>
                         <button class="btn btn-success" type="button" id="generateHeatmap">Generate Heatmap</button>
                         <button class="btn btn-success" type="button" id="generate3D">Generate 3D</button>
                       </div>
@@ -180,7 +180,7 @@
                   </div>
 
                   <div class="d-grid gap-2 d-md-block">
-                    <p class="card-text flex-grow-1 text-white">Ici le but du laboratoir
+                    <p class="card-text flex-grow-1 text-white">
                       
                   <div class="d-grid gap-2 d-md-block">
                     
@@ -217,5 +217,8 @@
 
   <script type='text/javascript' src="createGrid.js"></script> 
 
+  <script type='text/javascript' src="renderRestartMap.js"></script> 
+
+  <script type='text/javascript' src="renderarrondissements.js"></script> 
 
   
