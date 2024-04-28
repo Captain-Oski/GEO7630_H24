@@ -60,7 +60,7 @@ map.on('load', function () {
                 ['linear'],  // Spécification de l'interpolation linéaire
                 ['get', 'acp_enviro'],  // Récupération de la valeur de la propriété 'acp_enviro' de la couche
                 0, 'rgb(255, 255, 255)', // Pour une valeur de 0 de 'acp_enviro', utiliser la couleur blanche (RGB 255, 255, 255)
-                1, 'rgb(0, 0, 255)' // Pour une valeur de 1 de 'acp_enviro', utiliser la couleur bleue (RGB 0, 0, 255)
+               1, 'rgb(0, 0, 255)' // Pour une valeur de 1 de 'acp_enviro', utiliser la couleur bleue (RGB 0, 0, 255)
             ],
             'fill-opacity': 0.7 // Définition de l'opacité de remplissage à 0.7 (70%)
         }
