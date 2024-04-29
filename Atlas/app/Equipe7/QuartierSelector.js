@@ -3,58 +3,44 @@ function QuartierDisplay() {
     // Ajout de la source de données des quartiers
     map.addSource('DD891050.Quartier-source', {
         type: 'vector', // Type de source de données vecteur 
-        tiles: "https://redesigned-doodle-r44qr9j4v5x4fpxv9-8801.app.github.dev/DD891050.Quartier/{z}/{x}/{y}.pbf" // URL de la source
+        tiles: "https://shiny-trout-5ggj46wgpj7w37qjr-8801.app.github.dev/DD891050.Quartier/{z}/{x}/{y}.pbf" // URL de la source
     });
 
     // Ajout de la couche des quartiers
     map.addLayer({
-        'id': 'Quartier', // Identifiant de la couche
+        'id': 'DD891050.Quartier', // Identifiant de la couche
         'type': 'fill', // Type de géométrie de la couche (remplissage)
         'source': 'DD891050.Quartier-source', // Source des données de la couche
-        'source-layer': 'Quartier', // Nom de la couche dans la source de données
+        'source-layer': 'DD891050.Quartier', // Nom de la couche dans la source de données
         "layout": {"visibility": "visible"}, // Visibilité de la couche
         "paint": {
             "fill-color": "rgba(0, 233, 242, 1)",// Choisir couleur cyan
-            "fill-antialias": false,//aucun remplissage
-            "fill-outline-color": [//Afficher les propriétés des arrondissements ou quartiers
-                "get",
-                "nom_qr"
-            ],
-            "fill-translate-anchor": "map"// 
+            "fill-opacity": 0.5, // Opacité du remplissage
+            "fill-outline-color": "rgba(0, 0, 0, 1)", // Couleur du contour
         }
     });
 }
 
-
-    
- 
-
-
-
-// Ajouter un événement de clic sur le bouton "loadLayer" 
+// Ajout d'un événement de clic sur le bouton "loadLayer" 
 // pour charger la couche de points aléatoires
-//document
-   // .getElementById('Piste') // j'ai changé, et j'ai mis click et boutton pour essayer d'afficher ma couche, je pense que c'est un problème de source 
-   // .addEventListener('click', Piste);
+// document
+//     .getElementById('Piste') // j'ai changé, et j'ai mis click et boutton pour essayer d'afficher ma couche, je pense que c'est un problème de source 
+//     .addEventListener('click', Piste);
 
+const QuartierMontreal = document.querySelector('#QuartierMontrealCheckbox'); // Ajouter une constante Quartier de Montreal pour checkbox
+
+QuartierMontreal.addEventListener('change', (event) => { // Ecoute de l'évènement change pour la checkbox
+    if(event.target.checked) { // Si l'action est faite, afficher Quartier
+        QuartierDisplay();
+    } else { // Sinon, retirer la couche
+        // Supprimer la couche de la carte
     
 
-//
-    const QuartierMontreal = document.querySelector('#QuartierMontrealCheckbox'); // Ajouter une contante Quartier de Montreal pour checkbox
-
-    QuartierMontreal.addEventListener('change', (event) => { // Ecoute de l'évènement change pour la checkbox
-        if(event.target.checked) { // Si l'action est faite, afficher Quartier
-            QuartierDisplay()
-        }
-
-        else  {//sinon, retirer-les
-
-
-            // Supprimer la couche de la carte
-            map.removeLayer('DD891050.Quartier');
-         
-                 }
-         
-             });
+   // Supprimer la couche de la carte et la source de données 
+   map.removeLayer('DD891050.Quartier');
    
-    
+   map.removeSource ('DD891050.Quartier-source')
+
+
+    }
+});

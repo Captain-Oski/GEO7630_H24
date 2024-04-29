@@ -6,7 +6,7 @@
                 <div class="card-body d-flex flex-column">
 
 
-
+                  <h3 class="card-title">Choix</h3>
                     <div class="container"> 
                         <div class="row align-items-start">
                           <div class="col">
@@ -60,7 +60,7 @@
                           <div class="col">
                             
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="QuartierMontrealCheckbox">
+                                <input class="form-check-input" type="checkbox" name="checkbox" value="" id="QuartierMontrealCheckbox">
                                 <label class="form-check-label" for="QuartierMontrealCheckbox">
                                   Quartier
                                 </label>
@@ -70,8 +70,8 @@
                           <div class="col">
                             
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <input class="form-check-input" type="checkbox" name="checkbox" value="" id="EspacesVertsCheckbox">
+                                <label class="form-check-label" for="EspacesVertsCheckbox">
                                   Espace Vert
                                 </label>
                               </div>
@@ -84,8 +84,8 @@
                           <div class="col">
                             
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <input class="form-check-input" type="checkbox" name="checkbox" value="" id="ParkingBixiCheckbox">
+                                <label class="form-check-label" for="ParkingBixiCheckbox">
                                   Station Bixi
                                 </label>
                               </div>
@@ -115,7 +115,7 @@
                       </div>
 
                       <div class="d-grid gap-2">
-                        <button class="btn btn-success" type="button">Restart Map</button>
+                        <button class="btn btn-success" type="button" id="Restart" >Restart Map</button>
                         
                       </div>
 
@@ -133,29 +133,31 @@
           <div class="card" style="height: 100%;">
               <div class="card-body d-flex flex-column">
 
-                <h1 class="card-title">Zone d'activité</h1>
-                <p class="card-text flex-grow-1">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                
+                <h1 class="card-title">Caribus</h1>
+                <p class="card-text flex-grow-1">L'application Caribus vous permet de sélectionner un quartier de Montréal pour vous informer sur l'activité du quartier, les types de transports et les parcs. Cette interface donne directement l'accès à d'autres informations pertinentes de la part de la ville. Ceci vous permet d'évaluer votre quartier de choix en termes de commodités. Il est possible de générer des analyses statistiques en fonction de la commodités choisi..</p>
 
                 <select class="form-select" aria-label="Default select example">
                     <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="1">Ahuntsic-Cartierville</option>
+                    <option value="2">Anjou</option>
+                    <option value="3">Cote-Des-Neiges-Notre-Dame-De-Grace</option>
+                    <option value="1">Lachine</option>
+                    <option value="2">Lasalle</option>
+                    <option value="3">Le Plateau-Mont-Royal</option>
+                    <option value="1">Le Sud-Ouest</option>
+                    <option value="2">L'ile-Bizard-Sainte-Genevieve</option>
+                    <option value="3">Mercier-Hochelaga-Maisonneuve</option>
+                    <option value="1">Montreal-Nord</option>
+                    <option value="2">Outremont</option>
+                    <option value="3">Pierrefonds-Roxboro</option>
+                    <option value="1">Riviere-Des-Prairies-Pointe-Aux-Trembles</option>
+                    <option value="2">Rosemont-Petite-Patrie</option>
+                    <option value="3">Saint-Laurent</option>
+                    <option value="1">Saint-Leonard</option>
+                    <option value="2">Verdun</option>
+                    <option value="3">Ville-Marie</option>
+                    <option value="3">Villeray-Saint-Michel-Parc-Extension</option>
                   </select>
 
 
@@ -165,17 +167,20 @@
                     <div class="col" style="height: 100%;">
                     
                      
+
+                      
                       </p>
                      
                       <div class="d-grid gap-2">
+                        <button type=" button" class="btn btn-success" onclick="loadWFS()">Load WFS Data</button>
                         <button class="btn btn-success" type="button" id="generateHeatmap">Generate Heatmap</button>
-                        <button class="btn btn-success" type="button" id="generate3D">Generate 2.5 Layer</button>
+                        <button class="btn btn-success" type="button" id="generate3D">Generate 3D</button>
                       </div>
                     </div>
                   </div>
 
                   <div class="d-grid gap-2 d-md-block">
-                    <p class="card-text flex-grow-1 text-white">Ici le but du laboratoir
+                    <p class="card-text flex-grow-1 text-white">
                       
                   <div class="d-grid gap-2 d-md-block">
                     
@@ -206,5 +211,14 @@
 
   <script type='text/javascript' src="QuartierSelector.js"></script> 
 
+  <script type='text/javascript' src="renderEspaceVert.js"></script> 
+
+  <script type='text/javascript' src="render3D.js"></script> 
+
+  <script type='text/javascript' src="createGrid.js"></script> 
+
+  <script type='text/javascript' src="renderRestartMap.js"></script> 
+
+  <script type='text/javascript' src="renderarrondissements.js"></script> 
 
   
