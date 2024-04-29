@@ -47,16 +47,16 @@ function loadTeam(teamName) {
         .catch(error => {
             console.error('There was a problem with fetching the team content:', error);
         });
-}
+};
 
 
 
 const myLayers = ['grid', 'buffer', 'rdp', 'union', 'joined']
 
 // Cette fonction est appelée lorsque la carte est chargée.
-map.on('load', function () {
+//map.on('load', function () {
     // Charge une couche de points aléatoires.
-    loadRandomPointsLayer()
+    //loadRandomPointsLayer()
     // Ajoute un contrôle de légende personnalisé.
     // Lab 12
     // map.addControl(new MaplibreLegendControl({ 
@@ -66,21 +66,59 @@ map.on('load', function () {
     //     buffer: 'buffer',
     //     joined: 'joined'
     // }, { onlyRendered: true }), "bottom-left");
-});
+//});
 
-// Cette fonction est appelée lorsque la carte est en attente.
-map.on('idle', function () {
-    // Récupère les couches de style de la carte.
-    const layers = map.getStyle().layers;
-    // Parcourt toutes les couches.
-    layers.forEach((layer) => {
-        // Si la couche est 'joined', met à jour le compteur dynamique.
-        if (layer.id == 'joined') {
-            dynamicCount()
-        // Sinon, si la couche est 'rdp', met à jour le compteur de fonctionnalités.
-        } else if (layer.id == 'rdp') {
-            featureCount()
-        }        
-    });
-    // alert('test')
-});
+// // Cette fonction est appelée lorsque la carte est en attente.
+// map.on('idle', function () {
+//     // Récupère les couches de style de la carte.
+//     const layers = map.getStyle().layers;
+//     // Parcourt toutes les couches.
+//     layers.forEach((layer) => {
+//         // Si la couche est 'joined', met à jour le compteur dynamique.
+//         if (layer.id == 'joined') {
+//             dynamicCount()
+//         // Sinon, si la couche est 'rdp', met à jour le compteur de fonctionnalités.
+//         } else if (layer.id == 'rdp') {
+//             featureCount()
+//         }        
+//     });
+//     // alert('test')
+// });
+// // création du contrôle de navigation
+
+// var nav = new maplibregl.NavigationControl({
+
+//     showCompass: true, // affichage de la boussole
+
+//     showZoom: true, // affichage des boutons de zoom
+
+//     visualizePitch: true // affichage de l'angle d'inclinaison
+
+// });
+
+
+// // création du contrôle de géolocalisation
+
+// var geolocateControl = new maplibregl.GeolocateControl({
+
+//     positionOptions: {
+
+//         enableHighAccuracy: true // activation de la géolocalisation précise
+
+//     },
+
+//     trackUserLocation: true // suivi automatique de la position de l'utilisateur
+
+// })
+
+// map.addControl(geolocateControl, 'bottom-right'); // ajout du contrôle en bas à droite de la carte
+
+// // création du contrôle d'échelle
+
+// var scale = new maplibregl.ScaleControl({
+
+//     unit: 'metric' // utilisation de l'unité métrique
+
+// });
+
+// map.addControl(scale); // ajout du contrôle en bas à gauche de la carte
