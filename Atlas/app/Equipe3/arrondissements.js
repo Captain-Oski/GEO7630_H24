@@ -1,9 +1,9 @@
 // création d'une fonction pour charger une couche WFS : arrondissements
-function loadWFS() {
+function arrondissementswfs() {
     // Ajout de la source de données des arrondissements depuis pgFeatureServ
     map.addSource('arrondissements-source', {
-        type: 'featurecollection', // Type de source de données
-        data: 'https://sturdy-fiesta-v669g4447rjgh6gxj-9000.app.github.dev/collections/geo7630.arrondissements/items.json' // URL JSON des arrondissements
+        type: 'vector', // Type de source de données
+        tiles: ['https://sturdy-fiesta-v669g4447rjgh6gxj-8801.app.github.dev/geo7630.arrondissements/{z}/{x}/{y}.pbf'] // URL JSON des arrondissements
     });
 
     // Ajout de la couche des arrondissements à la carte MapLibre
@@ -13,12 +13,12 @@ function loadWFS() {
         'source': 'arrondissements-source', // source de la couche
         'paint': {
             'fill-outline-color': 'black',
-            'fill-color': getRandomColor(), // Si la condition est vraie, utilisez une couleur aléatoire
-            'fill-opacity': 0.3 // Opacité de remplissage (30%)
+            'fill-color': '#006400', // Couleur verte foncée
+            'fill-opacity': 0.3, // Opacité de remplissage (30%)
         }
     });
-}// fin de la fonciton
+} // fin de la fonction
 
 document
-    .getElementById('loadWFS') // ID unique du bouton
-    .addEventListener('click', loadWFS); // Ajout de l'écouteur d'événements pour le clic sur le bouton
+    .getElementById('arrondissementswfs') // ID unique du bouton
+    .addEventListener('click', arrondissementswfs); // Ajout de l'écouteur d'événements pour le clic sur le bouton
