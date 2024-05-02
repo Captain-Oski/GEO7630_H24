@@ -1,18 +1,18 @@
 // Création d'une fonction nommée loadLayer pour ajouter la couche espace_par_mtl
 function parc() {
+  alert('La couche est ajoutée avec succès.');
   // Ajout de la source de données pour les espaces verts des parcs de Montréal
-  map.addSource('espace_parc_mtl-source', {
+  map.addSource('h4_source', {
       type: 'vector',
       tiles: ['https://sturdy-fiesta-v669g4447rjgh6gxj-8801.app.github.dev/EG591962.espace_parc_mtl/{z}/{x}/{y}.pbf'], // URL des espaces parcs
-      minzoom: 0,
-      maxzoom: 22
+    
   });
 
   // Ajout de la couche pour les espaces verts des parcs de Montréal
   map.addLayer({
-      'id': 'espace_parc_mtl',
+      'id': 'h4',
       'type': 'fill', // Remplissage
-      'source': 'espace_parc_mtl-source',
+      'source': 'h4_source',
       'source-layer': 'EG591962.espace_parc_mtl',
       'paint': {
           'fill-color': '#006400', // Couleur verte pour les espaces verts

@@ -11,9 +11,10 @@ function arrondissementswfs() {
         'id': 'arrondissements', // Identifiant de la couche
         'type': 'fill', // Type de géométrie de la couche (remplissage)
         'source': 'arrondissements-source', // source de la couche
+        'source-layer' :'geo7630.arrondissements',
         'paint': {
             'fill-outline-color': 'black',
-            'fill-color': '#006400', // Couleur verte foncée
+            'fill-color': '#FA8072', // Couleur rose
             'fill-opacity': 0.3, // Opacité de remplissage (30%)
         }
     });
