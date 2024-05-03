@@ -1,17 +1,17 @@
 // création d'une fonction pour charger une couche WFS : arrondissements
 function arrondissementswfs() {
+    alert('La couche est ajoutée avec succès.');
     // Ajout de la source de données des arrondissements depuis pgFeatureServ
-    map.addSource('arrondissements-source', {
-        type: 'vector', // Type de source de données
-        tiles: ['https://sturdy-fiesta-v669g4447rjgh6gxj-8801.app.github.dev/geo7630.arrondissements/{z}/{x}/{y}.pbf'] // URL JSON des arrondissements
+    map.addSource('h5-source', {
+        type: 'geojson', // Type de source de données
+        data: 'https://sturdy-fiesta-v669g4447rjgh6gxj-9000.app.github.dev/collections/geo7630.arrondissements/items.json?limit=10000' // URL JSON des arrondissements
     });
 
     // Ajout de la couche des arrondissements à la carte MapLibre
     map.addLayer({
-        'id': 'arrondissements', // Identifiant de la couche
+        'id': 'h5', // Identifiant de la couche
         'type': 'fill', // Type de géométrie de la couche (remplissage)
-        'source': 'arrondissements-source', // source de la couche
-        'source-layer' :'geo7630.arrondissements',
+        'source': 'h5-source', // source de la couche
         'paint': {
             'fill-outline-color': 'black',
             'fill-color': '#FA8072', // Couleur rose

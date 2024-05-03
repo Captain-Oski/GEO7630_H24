@@ -13,14 +13,19 @@
                     <div class="container">
                       <div class="row">
                         <div class="col order-last">
-                           <div id='bouton1'>
+                          <div id='bouton1'>
                             <button type="button" class="btn btn-secondary" id='arrondissementswfs'>Arrondissements</button>
                           </div>
-                        </div>
-                        <div class="col">
-                         <!--Second in DOM, unordered-->
-                         <div id='bouton1'>
-                          <button type="button" class="btn btn-success" id='parc'>Espaces verts et parcs</button>
+                          </div>
+                          <div class="col">
+                            <div id='bouton1'>
+                              <button id="generate3D" class="btn btn-info col-8" type="button"> Générer grille </button>
+                            </div>
+                          </div>
+                            <div class="col">
+                              <!--Second in DOM, unordered-->
+                              <div id='bouton1'>
+                                <button type="button" class="btn btn-success" id='parc'>Espaces verts et parcs</button>
                         </div>
                         </div>
                         <div class="col order-first">
@@ -152,3 +157,7 @@
   <script type='text/javascript' src="arrondissements.js"></script>
 
   <script type='text/javascript' src="stations.js"></script>
+
+  <script type='text/javascript' src="data3D.js"></script>
+  
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.13.1/mapbox-gl.js'></script>

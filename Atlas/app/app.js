@@ -84,3 +84,15 @@ map.on('idle', function () {
     });
     // alert('test')
 });
+map.on('click', 'h5', function (e) {
+    var coordinates = turf.centroid(e.features[0]).geometry.coordinates; // Calcul des coordonnées du centre de la géométrie cliquée
+ 
+    // Création du contenu du popup
+    var popupContent = '<h3>' + e.features[0].properties.nom + '</h3>'; // Vous pouvez personnaliser le contenu du popup en fonction de vos besoins
+ 
+    // Ajout du popup à la carte Maplibre
+    new maplibregl.Popup()
+        .setLngLat(coordinates)
+        .setHTML(popupContent)
+        .addTo(map);
+});
